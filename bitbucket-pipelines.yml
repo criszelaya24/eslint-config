@@ -1,0 +1,9 @@
+image: smartboxtv/docker_deployment:latest
+
+pipelines:
+    default:
+        - step:
+            script:
+                - yarn
+                - yarn run lint
+                - yarn run test:istanbul

@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-nunchee",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "ESLint shareable config for the nunchee JavaScript style guide",
   "main": "index.js",
   "keywords": [
@@ -9,5 +9,19 @@
     "quality",
     "eslint",
     "lint"
-  ]
+  ],
+  "scripts": {
+    "lint": "eslint ./ -f table",
+    "test": "mocha",
+    "test:nyan": "mocha --reporter nyan",
+    "test:istanbul": "nyc --show-process-tree mocha"
+  },
+  "dependencies": {
+    "eslint": "^5.6.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.0.1"
+  }
 }
