@@ -1,5 +1,5 @@
 {
     "globals": {
-        "_expect": true
+        "_expect": true, "_path": true
     }
 }
