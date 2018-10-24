@@ -10,6 +10,9 @@ Para no tener que definir todas las reglas, se sigue un estándar predefinido co
 
 * node: permitir variables globales y scope de node
 * mocha: todas las variables globales que tiene mocha para codificar las pruebas
+* es6: necesario para reconocer variables globales como Promise, mas info [aquí][eslint-issues-9812]
+
+[eslint-issues-9812]: https://github.com/eslint/eslint/issues/9812
 
 [Environments]: https://eslint.org/docs/user-guide/configuring#specifying-environments
 
