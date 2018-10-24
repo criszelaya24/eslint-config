@@ -4,6 +4,13 @@ Todos los cambios importantes son escritos aquí. El Formato esta basado en [Kee
 
 ## [Unreleased]
 
+## [3.1.0] - 2018-10-19
+### Added
+- Se agregan nuevas reglas de espaciado antes o después de las llaves y condicionales
+
+### Changed
+- se actualiza la version del ecmascript a utilizar del es6 al 2017, para hacer uso de async/await
+
 ## [3.0.0] - 2018-10-08
 ### Added
 - se decide extender de lo recomendado por el equipo de eslint https://eslint.org/docs/rules
