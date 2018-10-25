@@ -4,6 +4,10 @@ Todos los cambios importantes son escritos aquí. El Formato esta basado en [Kee
 
 ## [Unreleased]
 
+## [3.1.1] - 2018-10-23
+### Added
+- Se agrega env.es6, ya que es necesario para reconocer variables globales como Promise
+
 ## [3.1.0] - 2018-10-19
 ### Added
 - Se agregan nuevas reglas de espaciado antes o después de las llaves y condicionales
