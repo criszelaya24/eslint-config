@@ -9,6 +9,7 @@ module.exports = {
     rules: {
         'array-bracket-spacing': [ 'error', 'always' ],
         'arrow-spacing': [ 'error', { before: true, after: true } ],
+        'brace-style': [ 'error', '1tbs', { allowSingleLine: true } ],
         'comma-dangle': [ 'error', 'always-multiline' ],
         'comma-spacing': [ 'error', { before: false, after: true } ],
         'indent': [ 'error', 4 ],
@@ -25,6 +26,8 @@ module.exports = {
             { blankLine: 'any', prev: [ 'const', 'let', 'var' ], next: [ 'const', 'let', 'var' ] },
             { blankLine: 'always', prev: 'directive', next: '*' },
             { blankLine: 'any', prev: 'directive', next: 'directive' },
+            { blankLine: 'always', prev: '*', next: 'if' },
+            { blankLine: 'always', prev: 'if', next: '*' },
         ],
         'quote-props': [ 'error', 'consistent' ],
         'quotes': [ 'error', 'single', { allowTemplateLiterals: true, avoidEscape: true } ],
