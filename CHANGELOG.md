@@ -3,6 +3,8 @@
 Todos los cambios importantes son escritos aquí. El Formato esta basado en [Keep a Changelog](http://keepachangelog.com/es-ES/1.0.0/)
 
 ## [Unreleased]
+### Added
+- se agrega regla para mantener estilo de escritura de llaves en if-else, try-catch y function
 
 ## [3.1.1] - 2018-10-23
 ### Added

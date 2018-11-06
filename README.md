@@ -26,6 +26,7 @@ Reglas personalizadas:
 
 * [array-bracket-spacing][array-bracket-spacing]: _always_
 * [arrow-spacing'][arrow-spacing']: _```{ before: true, after: true }```_
+* [brace-style][brace-style]: _1tbs_, _```{ allowSingleLine: true }```_
 * [comma-dangle][comma-dangle]: _always-multiline_
 * [comma-spacing][comma-spacing]: _```{ before: false, after: true }```_
 * [indent][indent]: _4_
@@ -41,14 +42,17 @@ Reglas personalizadas:
     * _```{ blankLine: 'any', prev: [ 'const', 'let', 'var' ], next: [ 'const', 'let', 'var' ] }```_
     * _```{ blankLine: 'always', prev: 'directive', next: '*' }```_
     * _```{ blankLine: 'any', prev: 'directive', next: 'directive' }```_
+    * _```{ blankLine: 'always', prev: '*', next: 'if' }```_
+    * _```{ blankLine: 'always', prev: 'if', next: '*' }```_
 * [quote-props][quote-props]: _consistent_
-* [quotes][quotes]: _single_ con las opciones de _allowTemplateLiterals_ y _avoidEscape_ activas
+* [quotes][quotes]: _single_, _```{ allowTemplateLiterals: true, avoidEscape: true }```_
 * [semi][semi]: _always_
 * [space-before-blocks][space-before-blocks]: _always_
 * [space-in-parens][space-in-parens]: _never_
 
 [array-bracket-spacing]: https://eslint.org/docs/rules/array-bracket-spacing
 [arrow-spacing']: https://eslint.org/docs/rules/arrow-spacing
+[brace-style]: https://eslint.org/docs/rules/brace-style#1tbs
 [comma-dangle]: https://eslint.org/docs/rules/comma-dangle#always-multiline
 [comma-spacing]: https://eslint.org/docs/rules/comma-spacing
 [indent]: https://eslint.org/docs/rules/indent

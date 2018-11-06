@@ -3,8 +3,8 @@
 describe('rules', () => {
     const { rules } = _path.require('/index.js');
 
-    it('cantidad de entornos activos', () => {
-        _expect(Object.keys(rules).length).to.equal(17);
+    it('cantidad de reglas definidas', () => {
+        _expect(Object.keys(rules).length).to.equal(18);
     });
     it('array-bracket-spacing: always - es requerido espacio después de [ y antes de ]', () => {
         const arrayBracketSpacing = [ 'error', 'always' ];
@@ -87,6 +87,9 @@ describe('rules', () => {
     describe('padding-line-between-statements', () => {
         const paddingLineBetweenStatements = rules['padding-line-between-statements'];
 
+        it(`cantidad de reglas de padding-line-between-statements`, () => {
+            _expect(paddingLineBetweenStatements.length).to.equal(8);
+        });
         it(`{ blankLine: 'always', prev: '*', next: 'return' } - siempre antes de un return debe existir una linea en blanco`, () => {
             const opt = { blankLine: 'always', prev: '*', next: 'return' };
 
@@ -112,6 +115,16 @@ describe('rules', () => {
 
             _expect(paddingLineBetweenStatements).to.deep.include(opt);
         });
+        it(`{ blankLine: 'always', prev: '*', next: 'if' } - siempre antes de un if debe existir una linea en blanco`, () => {
+            const opt = { blankLine: 'always', prev: '*', next: 'if' };
+
+            _expect(paddingLineBetweenStatements).to.deep.include(opt);
+        });
+        it(`{ blankLine: 'always', prev: 'if', next: '*' } - siempre después de un if debe existir una linea en blanco`, () => {
+            const opt = { blankLine: 'always', prev: 'if', next: '*' };
+
+            _expect(paddingLineBetweenStatements).to.deep.include(opt);
+        });
     });
     it('quote-props: consistent - validar que las propiedades de un mismo nivel tengan consistencia en llevar o no comillas', () => {
         const quoteProps = [ 'error', 'consistent' ];
@@ -133,9 +146,14 @@ describe('rules', () => {
 
         _expect(rules['space-before-blocks']).to.deep.equal(spaceBeforeBlocks);
     });
-    it(`space-in-parens: never } - nunca tener un espacio antes de ) y después de )`, () => {
+    it(`space-in-parens: never - nunca tener un espacio antes de ) y después de )`, () => {
         const spaceInParens = [ 'error', 'never' ];
 
         _expect(rules['space-in-parens']).to.deep.equal(spaceInParens);
+    });
+    it(`brace-style: 1tbs -  mantener estilo de escritura de llaves en if-else, try-catch y function`, () => {
+        const braceStyle = [ 'error', '1tbs', { allowSingleLine: true } ];
+
+        _expect(rules['brace-style']).to.deep.equal(braceStyle);
     });
 });

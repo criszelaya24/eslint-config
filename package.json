@@ -11,7 +11,7 @@
     "lint"
   ],
   "scripts": {
-    "lint": "eslint ./ -f table",
+    "lint": "eslint ./ -f table --ext .js",
     "test": "mocha",
     "test:nyan": "mocha --reporter nyan",
     "test:istanbul": "nyc --show-process-tree mocha"
