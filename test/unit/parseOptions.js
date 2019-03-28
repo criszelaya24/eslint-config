@@ -6,7 +6,7 @@ describe('parserOptions', () => {
     it('cantidad de opciones', () => {
         _expect(Object.keys(parserOptions).length).to.equal(1);
     });
-    it('ecmaVersion: 2017 - se activan las variables globales para node', () => {
-        _expect(parserOptions.ecmaVersion).to.be.equal(2017);
+    it('ecmaVersion: 2018 - se activan las variables globales para node', () => {
+        _expect(parserOptions.ecmaVersion).to.be.equal(2018);
     });
 });
