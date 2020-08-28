@@ -1,6 +1,0 @@
- ./test/**/*.test.js
---ui tdd
---reporter spec
---require ./test/globals.js
---colors
---exit
